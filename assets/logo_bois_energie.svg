@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Brown log rectangle with rounded corners -->
+    <rect x="10" y="40" width="120" height="40" rx="5" ry="5" fill="#8B4513" />
+    <!-- Wood rings circles -->
+    <circle cx="30" cy="60" r="8" fill="#A0522D" />
+    <circle cx="60" cy="60" r="8" fill="#A0522D" />
+    <circle cx="90" cy="60" r="8" fill="#A0522D" />
+    <!-- Flame using path shapes -->
+    <path d="M160 40 C155 20, 190 20, 185 40 C180 55, 170 70, 175 90 C165 70, 155 55, 160 40 Z" fill="#ff4500"/>
+    <path d="M170 50 C165 40, 175 40, 172 50 C170 60, 168 70, 170 80 C168 70, 166 60, 170 50 Z" fill="#ffa500"/>
+    <!-- Text name -->
+    <text x="10" y="25" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#013220">Bois &amp; Énergie</text>
+</svg>
