@@ -5,118 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/main.css" />
     <title>🪵🔥 Bois & Energie</title>
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <div></div>
-      <nav>
+    <div class="container">
+    <header class="header">
+      <h2 class="header_title">🪵🔥 Bois & Energie</h2>
+      <nav class="header_nav hidden">
         <a href="#whoarewe">Qui sommes-nous ?</a>
         <a href="#essences">Nos essences</a>
         <a href="#planner">Planificateur de mélange</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <img
+        class="menu-btn"
+        src="assets/icons/menu.svg"
+        alt="Menu Icon"
+        role="button"
+      />
     </header>
-    <body>
-      <section id="whoarewe">
-        <div class="hero">
-          <h1>Bois & Énergie</h1>
-          <p>Votre fournisseur en bois de chauffage depuis <b>1989</b></p>
-        </div>
-        <div class="stats">
-          <h2>Pourquoi nous choisir ?</h2>
-          <ul>
-            <li>400 000 tonnes de bois vendus</li>
-            <li>200 partenaires dans la région</li>
-            <li>97% de clients satisfaits</li>
-          </ul>
-        </div>
-      </section>
-      <section id="essences">
-        <h2>Découvrer nos séléctions d'essences de bois</h2>
-        <div class="essences-list">
-          <h3>Chêne - Puissant et combustion lente</h3>
-          <h3>Hêtre - chaleur constante et belle flamme</h3>
-          <h3>Charme - performance maximale</h3>
-          <h3>Bouleau - allumage rapide</h3>
-          <h3>Sapin - économique et pratique</h3>
-          <h3>Peuplier - léger et séchage rapide</h3>
-        </div>
-      </section>
-      <section id="planner">
-        <h2>Planifier vos mélanges !</h2>
-        <div>
-          <form>
-            <label data-target="chene"
-              >Chêne : <input type="range" min="0" max="100" step="1"
-            /></label>
-            <label data-target="hetre"
-              >Hêtre : <input type="range" min="0" max="100" step="1"
-            /></label>
-            <label data-target="charme"
-              >Charme : <input type="range" min="0" max="100" step="1"
-            /></label>
-            <label data-target="bouleau"
-              >Bouleau : <input type="range" min="0" max="100" step="1"
-            /></label>
-            <label data-target="sapin"
-              >Sapin : <input type="range" min="0" max="100" step="1"
-            /></label>
-            <label data-target="peuplier"
-              >Peuplier : <input type="range" min="0" max="100" step="1"
-            /></label>
+    <main>
+        <section id="whoarewe">
+          <div class="hero">
+            <div class="hero_blur">
+              <h1 class="hero_title">Bois & Énergie</h1>
+              <p class="hero_text">
+                Votre fournisseur en bois de chauffage depuis <b>1989</b>
+              </p>
+            </div>
+            <img
+              class="hero_img"
+              src="assets/FireWood-0837.jpg"
+              alt="Image de bois de chauffage"
+            />
+          </div>
+          <div class="stats">
+            <h2 class="title">Pourquoi nous choisir ?</h2>
+            <ul class="stats_list">
+              <li>
+                <span class="list_title">400 000</span
+                ><span>tonnes de bois vendus</span>
+              </li>
+              <li>
+                <span class="list_title">200</span
+                ><span>partenaires dans la région</span>
+              </li>
+              <li>
+                <span class="list_title">97%</span>
+                <span>de clients satisfaits</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="essences" id="essences">
+          <h2 class="title">Découvrer nos séléctions d'essences de bois</h2>
+          <div class="essences_container">
+            <div class="essences_list">
+              <h3><b>Chêne</b> - Puissant et combustion lente</h3>
+              <h3><b>Hêtre</b> - chaleur constante et belle flamme</h3>
+              <h3><b>Charme</b> - performance maximale</h3>
+              <h3><b>Bouleau</b> - allumage rapide</h3>
+              <h3><b>Sapin</b> - économique et pratique</h3>
+              <h3><b>Peuplier</b> - léger et séchage rapide</h3>
+            </div>
+            <div class="essences_images">
+              <img class="essences_images_1" src="assets/Firewood_for_the_winter_(Unsplash).jpg" alt="Firewood in the winter">
+              <img class="essences_images_2" src="assets/PALETTE-BOIS_burned.png" alt="Firewoord palette">
+            </div>
+          </div>
+          
+          
+        </section>
+        <section class="planner" id="planner">
+          <h2 class="title">Planifier vos mélanges !</h2>
+          <div class="planner_container">
+            <div class="planner_graph">
+              <div style="--value:2100; --color: black;" class="bar_container" id="chene-bar">
+                <div>
+                  <h3>Chêne (90€/m³)</h3>
+                  <p>2100 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+              <div style="--value:2000 ; --color: purple;" class="bar_container" id="hetre-bar">
+                <div>
+                  <h3>Chêne (85€/m³)</h3>
+                  <p>2000 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+              <div style="--value:2150; --color: yellow;" class="bar_container" id="charme-bar">
+                <div>
+                  <h3>Charme (95€/m³)</h3>
+                  <p>2150 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+              <div style="--value:1900; --color: blue;" class="bar_container" id="bouleau-bar">
+                <div>
+                  <h3>Bouleau (80€/m³)</h3>
+                  <p>1900 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+              <div style="--value:1600; --color: red;" class="bar_container" id="sapin-bar">
+                <div>
+                  <h3>Sapin (70€/m³)</h3>
+                  <p>1600 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+              <div style="--value:1550; --color: green;" class="bar_container" id="peuplier-bar">
+                <div>
+                  <h3>Peuplier (65€/m³)</h3>
+                  <p>1550 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+              <div style="--value:0; --color: green;" class="bar_container" id="custom-bar">
+                <div>
+                  <h3>Mélange (65€/m³)</h3>
+                  <p>1550 kWh/m³</p>
+                </div>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <form class="planner_form">
+              <label for="chene">Chêne : </label>
+              <input id="chene" data-target="chene" value="0" type="range" min="0" max="100" step="1"/>
+              
+              <label for="hetre">Hêtre : </label>
+              <input id="hetre" data-target="hetre" value="0" type="range" min="0" max="100" step="1"/>
+              
+              <label for="charme">Charme : </label>
+              <input id="charme" data-target="charme" value="0" type="range" min="0" max="100" step="1"/>
+             
+              <label for="bouleau">Bouleau : </label>
+              <input id="bouleau" data-target="bouleau" value="0" type="range" min="0" max="100" step="1"/>
+             
+              <label for="sapin">Sapin : </label>
+              <input id="sapin" data-target="sapin" value="0" type="range" min="0" max="100" step="1"/>
+             
+              <label for="peuplier">Peuplier : </label>
+              <input id="peuplier" data-target="peuplier" value="0" type="range" min="0" max="100" step="1"/>
+              <div></div>
+              <div></div>
+            </form>
+          </div>
+        </section>
+        <h2 class="title">Contactez nous !</h2>
+        <section class="contact" id="contact">
+          <form class="contact_form">
+            <div class="row">
+              <div class="input-wrapper">
+                <label for="name">Nom</label>
+                <input type="text" id="name" />
+              </div>
+              <div class="input-wrapper">
+                <label for="name">Email</label>
+                <input type="email" id="email" />
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="content">Votre demande</label>
+              <textarea id="content"></textarea>
+            </div>
+            <button>Envoyer</button>
           </form>
-          <div class="graph">
-            <div id="chene-bar">
-              <div class="bar"></div>
-              <h3>Chêne (90€/m³)</h3>
-              <p>2100 kWh/m³</p>
-            </div>
-            <div id="hetre-bar">
-              <div class="bar"></div>
-              <h3>Chêne (85€/m³)</h3>
-              <p>2000 kWh/m³</p>
-            </div>
-            <div id="charme-bar">
-              <div class="bar"></div>
-              <h3>Charme (95€/m³)</h3>
-              <p>2150 kWh/m³</p>
-            </div>
-            <div id="bouleau-bar">
-              <div class="bar"></div>
-              <h3>Bouleau (80€/m³)</h3>
-              <p>1900 kWh/m³</p>
-            </div>
-            <div id="sapin-bar">
-              <div class="bar"></div>
-              <h3>Sapin (70€/m³)</h3>
-              <p>1600 kWh/m³</p>
-            </div>
-            <div id="peuplier-bar">
-              <div class="bar"></div>
-              <h3>Peuplier (65€/m³)</h3>
-              <p>1550 kWh/m³</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contact">
-        <form>
-          <h2>Contactez nous !</h2>
-          <div class="input-wrapper">
-            <label for="name">Nom</label>
-            <input type="text" id="name" />
-          </div>
-          <div class="input-wrapper">
-            <label for="name">Email</label>
-            <input type="email" id="email" />
-          </div>
-          <div class="input-wrapper">
-            <label for="content">Votre demande</label>
-            <textarea id="content"></textarea>
-          </div>
-          <button>Envoyer</button>
-        </form>
-      </section>
-    </body>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
