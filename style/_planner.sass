@@ -1,0 +1,68 @@
+
+.planner
+    padding: 2rem
+    &_container
+        display: grid
+        gap: 2rem
+
+    &_graph
+        display: flex
+        flex-direction: column
+        gap: 1rem
+
+    &_form
+        display: grid
+        gap: 1rem
+        grid-template-columns: 4.3rem 1fr
+        flex-direction: column
+        align-items: center
+
+
+.custom_bar
+    display: flex
+    flex-direction: row
+    background: gray
+    height: 50%
+
+.bar_part
+    width: calc( var(--value) / var(--max-value) * 100% );
+    height: 100%
+    background: var(--color)
+
+.bar
+    height: 50%
+    display: flex
+
+    &_container
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr 1fr
+    
+    &::before
+        content: ""
+        background-color: var(--color)
+        width: calc( var(--value) / var(--max-value) * 100% )
+
+    &::after
+        content: ""
+        background: #0005
+        display: block
+        width: calc(100% - (var(--value) / var(--max-value) * 100%))
+        height: 100%
+
+
+@media screen and (min-width: 850px) 
+
+    .planner
+        &_container
+            display: grid
+            gap: 2rem
+            grid-template-columns: repeat(2, 1fr)
+        &_graph
+            grid-column: 2
+            grid-row: 1
+        &_form
+            grid-row: 1
+            grid-column: 1
+            flex-direction: row
+            flex-wrap: wrap    

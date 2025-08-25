@@ -1,0 +1,41 @@
+
+.essences
+    padding: 2rem
+    &_container
+        display: grid
+        row-gap: 2rem
+        grid-row: 2
+
+        & h3
+            font-weight: normal
+
+    &_list
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    &_images
+        grid-row: 1
+        position: relative
+
+        & img
+            max-width: 100%
+
+        &_1
+
+        &_2
+            position: absolute
+            bottom: 0
+            right: 1rem
+            height: 50%    
+    
+@media screen and (min-width: 850px) 
+    .essences
+        &_container
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 4rem
+            
+            & h3
+                font-weight: normal
+

@@ -1,0 +1,51 @@
+@use "misc"
+
+    
+.contact
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 4rem
+    &_form
+        display: flex
+        gap: 2rem
+        flex-direction: column
+        max-width: 600px
+
+        & button
+            padding-inline: 1rem
+            padding-block: .5rem
+            background: misc.$accent
+            color: misc.$background
+            border: none
+            border-radius: .5rem
+
+.input-wrapper
+    display: flex
+    flex: 1
+    flex-direction: column
+
+    label
+        margin-bottom: .25rem
+        color: #555
+
+    input, textarea
+        padding-inline: 1rem
+        padding-block: .5rem
+        border-radius: .5rem
+        border: 1px solid #CCC
+    textarea
+        resize: none
+        height: 150px
+
+.row
+    display: flex
+    gap: 2rem    
+    
+@media screen and (max-width: 850px) 
+    .contact
+        padding: 1rem
+
+    .row
+        display: flex
+        flex-wrap: wrap

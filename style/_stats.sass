@@ -1,0 +1,28 @@
+@use "misc"
+    
+.stats
+    padding: 2rem
+    margin-bottom: 4rem
+
+    &_list
+        padding: 0
+        margin: 0
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+        & li
+            display: flex
+            flex-direction: column
+            align-items: center
+            & .list_title
+                color: misc.$accent
+                font-size: 3rem
+                font-weight: bold
+    
+@media screen and (min-width: 850px) 
+    .stats
+        &_list
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            & .list_title
+                font-size: 5rem !important
