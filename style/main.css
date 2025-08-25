@@ -307,6 +307,7 @@
   }
   .stats_desc {
     margin-top: 4rem;
+    margin-bottom: 1rem;
   }
 }
 :root {
