@@ -2,6 +2,18 @@
 
 //header styling
 
+@keyframes scale 
+    0%
+        width: 0
+        white-space: nowrap
+    99%
+        white-space: nowrap
+
+    100%
+        width: 100%
+        white-space: normal
+
+
 .hero
     height: 90dvh
     position: relative
@@ -9,22 +21,43 @@
     display: flex
     align-items: stretch
     flex-direction: column
-    justify-content: center  
+    justify-content: center
+    align-items: center  
     margin-bottom: 4rem
+
 
     &_blur
         padding: 1rem
         border-radius: 1rem
-        text-align: center
         backdrop-filter: blur(5px)
+        display: flex
+        flex-direction: column
+        align-items: center
         z-index: 1
+        width: 100%
+        padding: 1rem
+        text-align: center
 
 
     
     &_title
         font-size: 2.5rem
+        white-space: nowrap
+        animation: scale 1s linear forwards;
+        width: 0%
+
+        overflow: hidden
+        animation-delay: .5s;
+
     &_text
         font-size: 1rem
+        white-space: nowrap
+        width: 0%
+
+        animation: scale .5s linear forwards;
+
+        overflow: hidden
+        animation-delay: 1.5s;
 
     &_img
         inset: 0
