@@ -81,54 +81,61 @@
           <h2 class="title">Planifier vos mélanges !</h2>
           <div class="planner_container">
             <div class="planner_graph">
-              <div style="--value:2100; --color: black;" class="bar_container" id="chene-bar">
+              <div style="--value:2100; --color: var(--chene);" class="bar_container" id="chene-bar">
                 <div>
                   <h3>Chêne (90€/m³)</h3>
                   <p>2100 kWh/m³</p>
                 </div>
                 <div class="bar"></div>
               </div>
-              <div style="--value:2000 ; --color: purple;" class="bar_container" id="hetre-bar">
+              <div style="--value:2000 ; --color: var(--hetre);" class="bar_container" id="hetre-bar">
                 <div>
-                  <h3>Chêne (85€/m³)</h3>
+                  <h3>Hêtre (85€/m³)</h3>
                   <p>2000 kWh/m³</p>
                 </div>
                 <div class="bar"></div>
               </div>
-              <div style="--value:2150; --color: yellow;" class="bar_container" id="charme-bar">
+              <div style="--value:2150; --color: var(--charme);" class="bar_container" id="charme-bar">
                 <div>
                   <h3>Charme (95€/m³)</h3>
                   <p>2150 kWh/m³</p>
                 </div>
                 <div class="bar"></div>
               </div>
-              <div style="--value:1900; --color: blue;" class="bar_container" id="bouleau-bar">
+              <div style="--value:1900; --color: var(--bouleau);" class="bar_container" id="bouleau-bar">
                 <div>
                   <h3>Bouleau (80€/m³)</h3>
                   <p>1900 kWh/m³</p>
                 </div>
                 <div class="bar"></div>
               </div>
-              <div style="--value:1600; --color: red;" class="bar_container" id="sapin-bar">
+              <div style="--value:1600; --color: var(--sapin);" class="bar_container" id="sapin-bar">
                 <div>
                   <h3>Sapin (70€/m³)</h3>
                   <p>1600 kWh/m³</p>
                 </div>
                 <div class="bar"></div>
               </div>
-              <div style="--value:1550; --color: green;" class="bar_container" id="peuplier-bar">
+              <div style="--value:1550; --color: var(--peuplier);" class="bar_container" id="peuplier-bar">
                 <div>
                   <h3>Peuplier (65€/m³)</h3>
                   <p>1550 kWh/m³</p>
                 </div>
                 <div class="bar"></div>
               </div>
-              <div style="--value:0; --color: green;" class="bar_container" id="custom-bar">
+              <div class="bar_container" id="custom-bar">
                 <div>
-                  <h3>Mélange (65€/m³)</h3>
-                  <p>1550 kWh/m³</p>
+                  <h3>Mélange (<span id="price">0</span>€/m³)</h3>
+                  <p><span id="pci">0</span> kWh/m³</p>
                 </div>
-                <div class="bar"></div>
+                <div class="custom_bar">
+                  <div style="--value: 0; --color: var(--chene);" class="bar_part" id="chene-bar-part"></div>
+                  <div style="--value: 0; --color: var(--hetre);" class="bar_part" id="hetre-bar-part"></div>
+                  <div style="--value: 0; --color: var(--charme);" class="bar_part" id="charme-bar-part"></div>
+                  <div style="--value: 0; --color: var(--bouleau);" class="bar_part" id="bouleau-bar-part"></div>
+                  <div style="--value: 0; --color: var(--sapin);" class="bar_part" id="sapin-bar-part"></div>
+                  <div style="--value: 0; --color: var(--peuplier);" class="bar_part" id="peuplier-bar-part"></div>
+                </div>
               </div>
             </div>
             <form class="planner_form">
