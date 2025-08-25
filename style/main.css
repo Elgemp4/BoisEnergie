@@ -305,6 +305,9 @@
   .stats_list .list_title {
     font-size: 5rem !important;
   }
+  .stats_desc {
+    margin-top: 4rem;
+  }
 }
 :root {
   --chene: #000000;
